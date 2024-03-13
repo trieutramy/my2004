@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input onclick="baitoandem()" type="submit" value="baitoandem">
+    <script>
+        function baitoandem(){
+             count = 0;
+for (let num = 100; num < 1000; num++) {
+    if (num % 5 === 0 && new Set(num.toString()).size === 3) {
+        count++;
+    }
+}
+
+console.log("Số tự nhiên có đúng 3 chữ số khác nhau và chia hết cho 5 là:", count);
+        } 
+    </script>
+</body>
+</html>

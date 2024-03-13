@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input onclick="baitoanlietke()" type="submit" value="baitoanlietke">
+    <script>      
+function baitoanlietke() 
+    <input onclick="baitoanlietke()" type="submit" value="baitoanlietke">
+    function combinations(arr, k) {
+    const result = [];
+
+    function backtrack(temp, start) {
+        if (temp.length === k) {
+            result.push([...temp]);
+            return;
+        }
+        for (let i = start; i < arr.length; i++) {
+            temp.push(arr[i]);
+            backtrack(temp, i + 1);
+            temp.pop();
+        }
+    }
+
+    backtrack([], 0);
+    return result;
+}
+
+const people = ['A', 'B', 'C', 'D', 'E'];
+const k = 3;
+const result = combinations(people, k);
+
+console.log("Tất cả các cách chọn", k, "người từ một nhóm gồm", people.length, "người là:");
+console.log(result);
+</body>
+</html>
